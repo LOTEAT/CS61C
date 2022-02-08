@@ -2,7 +2,7 @@
 
 The end result is like this.
 
-![](./GliderGuns.gif)
+<img src="./GliderGuns.gif"/>
 
 
 
