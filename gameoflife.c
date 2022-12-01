@@ -103,7 +103,7 @@ int main(int argc, char **argv)
 {
 	// MY SOLUTION HERE
 	if (argc != 3) {
-		printf("usage: ./gameOfLife filename rule",argv[0]);
+		printf("usage: ./gameOfLife filename rule");
 		printf("filename is an ASCII PPM file (type P3) with maximum value 255.\n");
 		printf("rule is a hex number beginning with 0x; Life is 0x1808.\n");
 		exit(-1);
