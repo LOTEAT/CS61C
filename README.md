@@ -5,7 +5,7 @@ For most of apis, it is easy to work it out.
 I think the most hardest is the rule of the game.
 For the game, we have a `rule(0xabcd)`. 
 For each cell, if it is alive, the next state is decided by `ab`;
-if it is dead, the next state is determined by `cd`.
+if it is dead, the next state is decided by `cd`.
 
 The end result is like this. 
 
