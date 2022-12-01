@@ -7,7 +7,9 @@ For the game, we have a `rule(0xabcd)`.
 For each cell, if it is alive, the next state is decided by `ab`;
 if it is dead, the next state is determined by `cd`.
 
-The end result is like this.
+The end result is like this. 
+
+
 <img src="./GliderGuns.gif"/>
 
 
