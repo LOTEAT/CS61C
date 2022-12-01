@@ -259,3 +259,4 @@ steganography
 studentOutputs/**/*.ppm
 
 labs
+.idea
