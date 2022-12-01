@@ -36,7 +36,7 @@ Image *steganography(Image *image)
 	// MY SOLUTION HERE
 	// You had better not use my solution,
 	// because this way is more complicated.
-	// The best solution is malloc a 1d array!
+	// The best solution is to malloc a 1d array!
 	Image *lsb_image = malloc(sizeof(Image));
 	lsb_image->image = (Color**) malloc(sizeof(Color*) * image->rows);  
 	lsb_image->cols = image->cols;
