@@ -16,8 +16,7 @@ main:
     add a0, s0, x0  # load the address of the first node into a0
 
     # load the address of the function in question into a1 (check out la on the green sheet)
-    ### MY SOLUTION HERE ###
-    la a1, square
+    ### YOUR CODE HERE ###
 
     # issue the call to map
     jal ra, map
@@ -34,12 +33,7 @@ main:
 
 map:
     # Prologue: Make space on the stack and back-up registers
-    ### MY SOLUTION HERE ###
-    addi sp, sp, -12
-    sw s0, 0(sp)
-    sw s1, 4(sp)  
-    sw ra, 8(sp)
-    
+    ### YOUR CODE HERE ###
 
     beq a0, x0, done    # If we were given a null pointer (address 0), we're done.
 
@@ -51,42 +45,31 @@ map:
 
     # load the value of the current node into a0
     # THINK: why a0?
-
-    ### MY SOLUTION HERE ###
-    lw a0, 0(s0)
+    ### YOUR CODE HERE ###
 
     # Call the function in question on that value. DO NOT use a label (be prepared to answer why).
     # What function? Recall the parameters of "map"
-    ### MY SOLUTION HERE ###
-    jalr s1
+    ### YOUR CODE HERE ###
 
     # store the returned value back into the node
     # Where can you assume the returned value is?
-    ### MY SOLUTION HERE ###
-    sw a0, 0(s0)
+    ### YOUR CODE HERE ###
 
     # Load the address of the next node into a0
     # The Address of the next node is an attribute of the current node.
     # Think about how structs are organized in memory.
-    ### MY SOLUTION HERE ###
-    lw a0, 4(s0)
+    ### YOUR CODE HERE ###
 
     # Put the address of the function back into a1 to prepare for the recursion
     # THINK: why a1? What about a0?
-    ### MY SOLUTION HERE ###
-    add a1, s1, x0
+    ### YOUR CODE HERE ###
 
     # recurse
-    ### MY SOLUTION HERE ###
-    jal ra, map
+    ### YOUR CODE HERE ###
 
 done:
     # Epilogue: Restore register values and free space from the stack
-    ### MY SOLUTION HERE ###
-    lw s0, 0(sp)
-    lw s1, 4(sp)
-    lw ra, 8(sp)
-    addi sp, sp, 12
+    ### YOUR CODE HERE ###
 
     jr ra # Return to caller
 
@@ -138,6 +121,6 @@ print_newline:
 
 malloc:
     addi    a1, a0, 0
-    addi    a0, x0, 9
+    addi    a0, x0 9
     ecall
     jr  ra
