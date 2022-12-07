@@ -255,5 +255,3 @@ server_basic server_process
 
 # IntelliJ / PyCharm
 /.idea/
-
-labs
