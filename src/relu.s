@@ -15,7 +15,7 @@
 relu:
     # Prologue
     # store some values
-    addi sp, sp, -12
+    addi sp, sp, -16
     sw t0, 0(sp)
     sw t1, 4(sp)
     # load value from array
@@ -43,11 +43,9 @@ loop_continue:
 loop_end:
     lw t0, 0(sp)
     lw t1, 4(sp)
-    # load value from array
     lw s0, 8(sp)
-    # element address
     lw s1, 12(sp)
-    addi sp, sp, 12
+    addi sp, sp, 16
 
 
     # Epilogue
